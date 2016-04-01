@@ -1,5 +1,11 @@
+import junit.framework.TestCase;
 
-public class TestRandomValue 
+//tests random value class via junit
+public class TestRandomValue extends TestCase 
 {
 
+	public void testNotNullRandomPlayStuff()
+	{
+		assertNotNull(RandomPlayStuff.getRandomPlayStuffValue());
+	}
 }
