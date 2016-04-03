@@ -3,9 +3,9 @@
 import junit.framework.Test;
 import junit.framework.TestSuite;
 
-public class AllTests 
+public class AllUnitTests 
 {
-
+	//test suite  for all junit tests
 	public static Test suite()
 	{
 		TestSuite suite = new TestSuite();

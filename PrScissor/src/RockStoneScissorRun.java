@@ -54,6 +54,7 @@ public class RockStoneScissorRun
 		System.out.println("Player 1 chose paper " + intPlayer1ChosenPaper + " times.");
 	}
 	
+	//some runs
 	private static void playSeveralTimes(int _runs) 
 	{
 		initHMChosenStuff();
@@ -218,6 +219,7 @@ public class RockStoneScissorRun
 		}
 	}
 
+	//inits play modes
 	private static void initPlayerPlayModes() 
 	{
 		player1.setPlayMode(PlayModes.RANDOM_ALL);

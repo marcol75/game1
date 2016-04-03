@@ -1,5 +1,5 @@
 
-//tests enum PlayStuff
+//tests enum RandomPlayStuff
 public class TestRandomPlayStuff2 
 {
 	//tests if Random PlayStuff value not null
