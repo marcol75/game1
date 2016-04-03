@@ -1,7 +1,7 @@
 import junit.framework.TestCase; //junit test case
 
 //tests enum PlayMode via junit
-public class TestPlayMode extends TestCase 
+public class UnitTestPlayMode extends TestCase 
 {
 	//tests if PlayMode values not null
 	public void testEnumNotNullPlayMode()
@@ -17,8 +17,7 @@ public class TestPlayMode extends TestCase
 	{
 		assertEquals(PlayModes.valueOf("ROCK").name(), "ROCK");
 		assertEquals(PlayModes.valueOf("SCISSOR").name(), "SCISSOR");
-		assertEquals(PlayModes.valueOf("PAPER").name(), "PAPER");	
-		
+		assertEquals(PlayModes.valueOf("PAPER").name(), "PAPER");
 		for (PlayModes currentPlayMode : PlayModes.values())
 		{
 			assertEquals(PlayModes.valueOf(currentPlayMode.name()).name(), currentPlayMode.name());

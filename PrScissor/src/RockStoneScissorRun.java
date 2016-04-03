@@ -24,7 +24,7 @@ public class RockStoneScissorRun
 	static HashMap<Integer, Player> players = new HashMap<Integer, Player>(); //players map
 	static HashMap<Integer, HashMap<PlayStuff, Integer>> hmChosenStuffs = new HashMap<Integer, HashMap<PlayStuff, Integer>>(); 
 	
-	//playing 100
+	//playing 100 rounds
 	public static void main(String[] args)
 	{
 		initPlayers(); //inits
@@ -85,7 +85,6 @@ public class RockStoneScissorRun
 		int intWinner = getWinner(chosenStuffPlayer1, chosenStuffPlayer2);
 //		showWinner(chosenStuffPlayer1, chosenStuffPlayer2, intWinner);
 		
-		
 		if (intWinner > 0)
 		{
 			roundsWonPlayer1 ++;
@@ -117,7 +116,8 @@ public class RockStoneScissorRun
 		}
 	}
 
-	private static int getWinner(PlayStuff _chosenStuffPlayer1,
+	//returns if player1 or player2 has won
+	protected static int getWinner(PlayStuff _chosenStuffPlayer1,
 			PlayStuff _chosenStuffPlayer2) 
 	{
 		int result = -10;
@@ -178,18 +178,15 @@ public class RockStoneScissorRun
 	//hash map inits
 	private static void initHMChosenStuff() 
 	{
-		
-//		ArrayList<HashMap<PlayStuff, Integer>> arPlayStuff = new ArrayList<HashMap<PlayStuff, Integer>>();
 		HashMap<PlayStuff, Integer> hmPlayStuff1 = new HashMap<PlayStuff, Integer>();
-		HashMap<PlayStuff, Integer> hmPlayStuff2 = new HashMap<PlayStuff, Integer>();
-		
+		HashMap<PlayStuff, Integer> hmPlayStuff2 = new HashMap<PlayStuff, Integer>();		
 		for (PlayStuff currentPlayStuff : PlayStuff.values())
 		{
-			hmPlayStuff1.put(currentPlayStuff, 0);
-			hmPlayStuff2.put(currentPlayStuff, 0);
+			hmPlayStuff1.put(currentPlayStuff, 0); //rock, scissors, paper chosen 0 times
+			hmPlayStuff2.put(currentPlayStuff, 0); //rock, scissors, paper chosen 0 times
 		}	
-		hmChosenStuffs.put(player1.getNumber(), hmPlayStuff1);
-		hmChosenStuffs.put(player2.getNumber(), hmPlayStuff2);
+		hmChosenStuffs.put(player1.getNumber(), hmPlayStuff1); //player 1 inits
+		hmChosenStuffs.put(player2.getNumber(), hmPlayStuff2); //player 2 inits
 	}
 
 	//every player gets a number
@@ -203,7 +200,7 @@ public class RockStoneScissorRun
 		}		
 	}
 
-	//adds players to list
+	//adds players to list and inits their names and play modes
 	private static void initPlayers() 
 	{
 		players.put(1, player1);

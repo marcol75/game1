@@ -1,6 +1,3 @@
-import java.util.function.IntPredicate;
-
-
 //tests enum RandomPlayStuff
 public class TestRandomNess 
 {
@@ -11,10 +8,10 @@ public class TestRandomNess
 		int rocks = 0;
 		int scissors = 0;
 		
-		for (int i=0; i < 100000; i ++)
+		for (int i=1; i <= 100000; i ++)
 		{
 			PlayStuff randomPlayStuff = RandomPlayStuff.getRandomPlayStuffValue();
-			System.out.println(randomPlayStuff);
+			System.out.println("Run " + i +  ". chosen : " + randomPlayStuff);
 			switch (randomPlayStuff) {
 			case PAPER:	
 			{
@@ -37,23 +34,19 @@ public class TestRandomNess
 				break;
 			}
 		}
+		int maxValue = Math.max(Math.max(rocks, papers), scissors); //most chosen
+		int minValue = Math.min(Math.min(rocks, papers), scissors); //least chosen
+		int minMaxDifference = maxValue - minValue;	//difference between least and most chosen
+		int percentageDifference = minMaxDifference * 100 / maxValue; // diff in %
 		
-		int maxValue = Math.max(Math.max(rocks, papers), scissors);
-		int minValue = Math.min(Math.min(rocks, papers), scissors);
-		
-		int minMaxDifference = maxValue - minValue;
-		
-		int percentageDifference = minMaxDifference * 100 / maxValue;
-		
+		System.out.println("************************************************");
 		if (percentageDifference < 2)
 		{
-			System.out.println("OK - Less than 2 percent deviation : " + minMaxDifference + " of " + maxValue);
+			System.out.println("OK - less than 2 percent deviation : " + minMaxDifference + " of " + maxValue);
 		}
 		else
 		{
 			System.out.println("More than 2 percent deviation : " + minMaxDifference + " of " + maxValue);
 		}
-
 	}
-
 }

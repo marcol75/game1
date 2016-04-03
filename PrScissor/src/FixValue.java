@@ -1,4 +1,3 @@
-
 //returns "Rock" for 2nd player
 public class FixValue 
 {

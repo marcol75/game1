@@ -1,8 +1,7 @@
-
 import junit.framework.TestCase;
 
 //tests enum PlayStuff
-public class TestPlayStuff extends TestCase 
+public class UnitTestPlayStuff extends TestCase 
 {
 	//tests if PlayStuff values not null
 	public void testEnumNotNullPlayStuff()
@@ -14,7 +13,6 @@ public class TestPlayStuff extends TestCase
 		{
 			assertNotNull(PlayStuff.valueOf(currentPlayStuff.name()));
 		}		
-
 	}
 	
 	//tests if PlayStuff names equal
@@ -23,7 +21,6 @@ public class TestPlayStuff extends TestCase
 		assertEquals(PlayStuff.valueOf("ROCK").name(), "ROCK");
 		assertEquals(PlayStuff.valueOf("SCISSOR").name(), "SCISSOR");
 		assertEquals(PlayStuff.valueOf("PAPER").name(), "PAPER");	
-		
 		for (PlayStuff currentPlayStuff : PlayStuff.values())
 		{
 			assertEquals(PlayStuff.valueOf(currentPlayStuff.name()).name(), currentPlayStuff.name());
