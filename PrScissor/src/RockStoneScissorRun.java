@@ -29,8 +29,8 @@ public class RockStoneScissorRun
 	{
 		initPlayers(); //inits
 		playSeveralTimes(NoRounds); //100 times
-		System.out.println("player " + player1.getName()  + " won " + roundsWonPlayer1 + " / " + NoRounds + " times.");
-		System.out.println("player " + player2.getName()  + " won " + roundsWonPlayer2 + " / " + NoRounds + " times.");
+		System.out.println("Player " + player1.getName()  + " won " + roundsWonPlayer1 + " / " + NoRounds + " times.");
+		System.out.println("Player " + player2.getName()  + " won " + roundsWonPlayer2 + " / " + NoRounds + " times.");
 		System.out.println("Nobody          won " + roundsWithOutWinner + " / 100 times.");
 		System.out.println("**********************************************");
 		
