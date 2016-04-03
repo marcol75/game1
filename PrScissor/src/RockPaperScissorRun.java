@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Random;
 
 //main class - simulates a rock, paper, scissors game
-public class RockStoneScissorRun 
+public class RockPaperScissorRun 
 {
 	private static final int NoRounds = 100; //no of rounds
 	static int roundsWithOutWinner = 0;
